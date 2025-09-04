@@ -1,0 +1,6 @@
+$: s("bd").lpf("<200 1000>")
+
+$: note("<[c2 e2 g2 e2], [c2 b2 g2 b2]*2>").sound("piano")  
+
+$: note("A0").lpf("<200 1000>").sound("piano")
+
