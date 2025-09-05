@@ -1,0 +1,23 @@
+setcpm(180/4)
+samples('github:switchangel/breaks')
+samples('github:bubobubobubobubo/dough-waveforms')
+
+
+$: s("bd [bd bd] - bd").bank("poly800")._punchcard()
+$: s("hh!16").bank("tr909").postgain('.2')
+
+$: note("A1(4,16)").sound("sawtooth").gain(2).vib(4).clip("<4 1>").lpf("<500 1000>")
+
+$: note("c eb g bb").s("wt_dbass").clip(2)
+
+//$: s("breaks/2").fit()
+  .scrub(irand(16).div(8).seg(8).rib("<4 20>", 1)
+        )
+  .n(irand(2).rib(20,1))
+  .almostNever(ply("2 | 4"))
+  .orbit(2)
+  ._scope()
+
+
+
+
